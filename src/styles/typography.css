@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Manolete";
+    src: url("../fonts/MANOLETE.ttf");
+  }
+
+  @font-face {
+    font-family: "Rochester Twee";
+    src: url("../fonts/Rochester Twee.ttf");
+  }
+
+  @font-face {
+    font-family: "Tnanti";
+    src: url("../fonts/TNanti-Demo.otf");
+  }
+
+  @font-face {
+    font-family: "Bebas";
+    src: url("../fonts/BebasNeue-Regular.woff");
+  }
+
+  @font-face {
+    font-family: "Mount Hills";
+    src: url("../fonts/Mount Hills.otf");
+  }

@@ -1,0 +1,42 @@
+.nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: $white-color;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    z-index: 1;
+}
+
+.nav-content {
+    text-align: right;
+}
+
+.nav-item {
+    font-family: cambria;
+    font-weight: bold;
+    line-height: 2.0;
+    display: inline;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    color: $light-orange-text;
+  }
+  
+.nav-item:hover {
+    color: $dark-orange-text;
+    border-bottom: 1px solid $primary-color;
+    cursor: pointer;
+}  
+
+.nav-item > .active {
+    color: $dark-orange-text;
+}
+
+.code {
+    color: #8A6534;
+    padding: 4;
+    background-color: #FFF4DB;
+    font-size: 1.25rem;
+    border-radius: 4;
+}
