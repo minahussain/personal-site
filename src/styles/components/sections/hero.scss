@@ -6,7 +6,6 @@
   background: $dark-primary-color;
   color: $dark-primary-text;
   padding: 5.6rem;
-  margin-top: 3rem;
   margin-bottom: 0;
   overflow-y: hidden;
 
@@ -21,13 +20,13 @@
   }
 
   #bio {
-    width: 30rem;
+    width: 28rem;
   }
 
   button {
     border: none;
     border-radius: 5px; /* 5px rounded corners */
-    background-color: $dark-primary-highlight;
+    background-color: $light-primary-highlight;
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -45,7 +44,7 @@
     }
 
     a:hover {
-      color: $darkest-primary-text;
+      color: $dark-primary-color;
       text-decoration: none;
     }
   } //end button
