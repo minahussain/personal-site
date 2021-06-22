@@ -1,6 +1,8 @@
 @import './variables';
+@import './transitions';
 
-@import './components/nav';
+@import './components/menus/nav';
+@import './components/menus/socials';
 @import './components/sections/section';
 @import './components/sections/hero';
 @import './components/sections/about';
@@ -12,40 +14,77 @@
 .main {
     position: absolute;
     left: 0;
+    width: 100%;
 
     h1 {
-        color: $dark-blue-text;
-        font-family: manolete;
-        font-size: 50px;
-        letter-spacing: 10px;
+        color: $dark-primary-text;
+        font-family: bebas;
+        font-size: 5rem;
+        letter-spacing: 0.5rem;
+        margin: 0;
+
+        @media screen and (max-width: 800px) {
+            font-size: 3rem;
+        }
     }
 
     h2 {
-    color: $white-color;
-    font-family: rochester twee;
-    line-height: 50px;
-    font-size: 40px;
-    letter-spacing: 5px;
+        color: $light-primary-text;
+        font-family: rochester twee;
+        text-align: center;
+        line-height: 50px;
+        font-size: 40px;
+        letter-spacing: 5px;
+
+        @media screen and (max-width: 800px) {
+            font-size: 30px;
+        }
     }
 
     h3 {
-    color: $light-blue-text;
-    font-family: tnanti;
-    line-height: 40px;
-    font-size: 30px;
-    letter-spacing: 3px;
+        color: $light-primary-text;
+        font-family: georgia;
+        line-height: 40px;
+        font-size: 20px;
+        letter-spacing: 3px;
+
+        @media screen and (max-width: 800px) {
+            font-size: 14px;
+        }
     }
 
     h4 {
-    color: $secondary-color;
-    font-family: tnanti;
-    line-height: 30px;
-    font-size: 25px;
+        color: $light-primary-text;
+        font-family: tnanti;
+        line-height: 30px;
+        font-size: 25px;
+
+        @media screen and (max-width: 800px) {
+            font-size: 18px;
+        }
     }
 
     p {
-        font-family: verdana;
+        font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 14px;
         line-height: 25px;
+    }
+
+    #center { 
+        margin: auto;
+        width: 35%;
+        text-align: justify;
+    }
+}
+
+a {
+    color: $light-primary-color;
+    font-family: georgia;
+}
+
+@media screen and (max-width: 800px) {
+    #main {
+        width: 100%;
+        display: block;
     }
 }

@@ -1,20 +1,31 @@
 // COLORS
-$primary-color: #da7959;
-$secondary-color: #76abc2;
+$light-primary-color: #da7959;
+$dark-primary-color: #aa3c09;
+$darkest-primary-color: #8a3913;
+$light-secondary-color: #7baab6;
+$dark-secondary-color: #006079;
 
 $white-color: #fde9db;
-$dark-grey: #3f3f3f;
+$peach-white-color: #d8b391;
+$dark-grey: #292525;
 
-// headings
-//$light-orange-text: #d89c5f;
-$light-orange-text: #d88c60;
-$dark-orange-text: #d44e00;
-$light-blue-text: #5d8596;
-$dark-blue-text: #1b546b;
+// text colors
+$light-primary-text: #ec9c6e;
+$dark-primary-text: #d44e00;
+$darker-primary-text: #9b3900;
+$darkest-primary-text: #7c2e00;
+$light-secondary-text: #5d8596;
+$dark-secondary-text: #1b546b;
+$darker-secondary-text: rgb(30, 67, 82);
 
 // highlighting
-$dark-blue-highlight: #1a546b77;
-$light-blue-highlight: #87c5df3f;
+$dark-secondary-highlight: #1a546b77;
+$light-secondary-highlight: #84b4c9d8;
+$light-primary-highlight: #ce733ff3;
+$dark-primary-highlight: #d47036ab;
+ 
+// links
+$primary-link: #da79599a;
 
 // FONT SIZE
 $default-font-size: 1.6rem;

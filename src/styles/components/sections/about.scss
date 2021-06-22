@@ -1,18 +1,25 @@
 #about {
-  background-color: $primary-color;
+  background-color: $dark-secondary-color;
   background-image: linear-gradient(
-    120deg,
-    $primary-color 20%,
-    $secondary-color 100%
+    180deg,
+    $dark-primary-color 0,
+    $light-primary-color 90%
   );
-  color: $white-color;
+  color: $peach-white-color;
   height: 100%;
   border-top: 0px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  padding: 5rem 15rem;
+  padding: 10rem 15rem;
 
   p {
-    color: $white-color;
+    color: $peach-white-color;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #about {
+      width: 100%;
+      display: block;
   }
 }

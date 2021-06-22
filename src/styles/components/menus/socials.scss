@@ -1,0 +1,33 @@
+.socials {
+    height: 100%;
+    position: fixed;
+    top: 7rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    overflow-y: hidden; /* Disable vertical scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    z-index: 1; /* Keep navbar on top of sections */
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+}
+
+.socials-item {
+    font-family: 'arial narrow', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    line-height: 2.0;
+    display: block;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    color: $primary-link;
+
+    a {
+        color: $primary-link;
+    }
+
+    a:hover {
+        color: $light-primary-color;
+        cursor: pointer;
+    }
+}

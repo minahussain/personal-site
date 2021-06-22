@@ -3,17 +3,64 @@
   height: 100vh;
   display: block;
   border-bottom: 0px;
-  background: $white-color;
-  font-weight: 400;
-  color: $dark-orange-text;
-  padding: 0rem 5.6rem;
+  background: $dark-primary-color;
+  color: $dark-primary-text;
+  padding: 5.6rem;
   margin-top: 3rem;
   margin-bottom: 0;
+  overflow-y: hidden;
 
   // If you want to set a background image on the hero section, uncomment these with yout custom image
 
   /* background: url("/src/assets/[your-image].png");
   background-position: center;
   background-size: cover; */
+
+  .regular {
+    color: $darkest-primary-text;
+  }
+
+  #bio {
+    width: 30rem;
+  }
+
+  button {
+    border: none;
+    border-radius: 5px; /* 5px rounded corners */
+    background-color: $dark-primary-highlight;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+    a {
+      color: $light-primary-text;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $darkest-primary-text;
+      text-decoration: none;
+    }
+  } //end button
 }
+
+@media screen and (max-width: 800px) {
+  #hero {
+    display: block;
+    padding: 1rem 1rem 0rem 1rem;
+    margin: 3rem 0 0 0;
+    height: 100%;
+    min-height: 100%;
   
+    #bio {
+      width: 90%;
+    }
+  }
+}

@@ -1,7 +1,8 @@
 import * as React from "react"
-import Navbar from '../components/navbar';
+import Navbar from '../components/menus/navbar';
+import Socials from '../components/menus/socials';
 import Hero from '../components/sections/hero';
-import About from '../components/sections/about';
+//import About from '../components/sections/about';
 import Projects from '../components/sections/projects';
 import Contact from '../components/sections/contact';
 // Import from a CSS file in your src
@@ -12,9 +13,9 @@ const IndexPage = () => {
   return (
     <div className="main">
       <Navbar />
+      <Socials />
       <title>Mina Hussain</title>
       <Hero />
-      <About/>
       <Projects />
       <Contact />
     </div>

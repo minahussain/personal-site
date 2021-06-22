@@ -1,32 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Hero = () => {
-  const name = <h1 className="big-heading">Mina Hussain</h1>;;
+  let [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setTimeout(()=>setShow(true), 1000);
+  }, [])
+
+  const intro = <h1 className="regular">Welcome. I'm{" "}</h1>
+  const name = <h1>Mina Hussain</h1>;
   const brief = (
-    <h3>
-      A software dev from Maryland, currently living in the bay area.
-      <br />
-      I operate on intuition, observation, and ~imagination~{" "}
-      <span role="img" aria-label="Rainbow emoji">
-        🌈
-      </span>
-      <br /><br />
-      Lets work together!
-    </h3>
+    <div id="bio">
+      <h3>
+        Software dev currently living in the bay area.<br />
+        I operate on coffee, observation, <br />and ~imagination~{" "}
+        <span role="img" aria-label="Rainbow emoji">
+          🌈
+        </span><br />
+      </h3>
+    </div>
   );
   const contact = (
-    <a href={`mailto:saminahu@gmail.com`} className="email-link">
+    <button><a href={`mailto:saminahu@gmail.com`}>
       Get In Touch
-    </a>
+    </a></button>
   );
 
-  const items = [name, brief, contact];
+  const items = [intro, name, brief, contact];
 
   return (
     <section id="hero" className="jumbotron">
-      {items.map((item, i) => (
-        <div key={i}>{item}</div>
-      ))}
+      <TransitionGroup component={null}>
+        {items.map((item, i) => (
+          <CSSTransition in={show} key={i} classNames="fadeup" timeout={300}>
+            <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
+          </CSSTransition>
+        ))}
+      </TransitionGroup>
     </section>
   );
 };

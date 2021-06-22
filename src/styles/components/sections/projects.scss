@@ -1,16 +1,103 @@
 #projects {
-    background-color: $white-color;
-    color: $dark-orange-text;
-    margin-top: -15rem;
-    padding: 25rem 15rem;
-    //margin-left: 150px;
-
-    h2 {
-        color: $light-blue-text;
+    background-color: $dark-secondary-color;
+    background-image: linear-gradient(
+      180deg,
+      $dark-primary-color 0,
+      $light-primary-color 90%
+    );
+    color: $peach-white-color;
+    height: 100%;
+    border-top: 0px;
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    padding: 5rem 5rem;
+  
+    p {
+      color: $peach-white-color;
     }
 
-    p {
-        color: $dark-blue-text;
-      }
-}
+    img {
+        border-radius: 5px;
+        margin-left: -20px;
+    }
+
+    .project-description {
+        display: flex;
+        margin-left: 3rem;
+        margin-top: -5rem;
+        border-radius: 5px;
+        //box-shadow: 0 2px 8px 0 $white-color; /* this adds the "card" effect */
+        background-color: $darkest-primary-color;
+    }
+
+    .project-tech {
+        display: flex-start;
+        width: 50%;
+        margin-left: 2rem;
+        margin-top: -3rem;
+    }
+
+    .project-links {
+        display: flex-end;
+    }
+    
+    /* Remove extra left and right margins, due to padding in columns */
+    .row {
+        //margin: 0 -5px;
+        margin: auto;
+        width: 80%;
+        padding-bottom: 30%;
+    }
+
+    /* Float columns side by side */
+    .column {
+        float: left;
+        width: 30%;
+        padding: 0 10px;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    /* Style the counter cards */
+    .card {
+        box-shadow: 2px 4px 8px 0 $dark-primary-highlight; /* this adds the "card" effect */
+        padding: 0px;
+        margin-top: 30px;
+        margin-right: 100px;
+        float: right;
+        text-align: center;
+        //border-radius: 5px; /* 5px rounded corners */
+        background-color: $light-primary-color;
+
+        /* Add some padding inside the card container */
+        .container {
+            padding: 2px 10px;
+        }
+    }
+  
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+        box-shadow: 4px 8px 8px 0 $dark-primary-highlight;
+    }
+
+    /* Add rounded corners to the top left and the top right corner of the image */
+    // img {
+    //     border-radius: 5px 5px 0 0;
+    // }
+    
+    /* Responsive columns - one column layout (vertical) on small screens */
+    @media screen and (max-width: 800px) {
+        .column {
+            width: 100%;
+            display: block;
+            margin: 1rem;
+            padding: 1rem 1rem;
+        }
+    }
+  }
   
