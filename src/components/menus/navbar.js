@@ -17,11 +17,11 @@ export default class Navbar extends Component {
                                 width="24px"
                                 height="24px"
                                 className="nav-logo"
-                                alt="Logo."
+                                alt="Mina."
                                 onClick={this.scrollToTop}
                             />
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link
                                 activeClass="active"
                                 to="about"
@@ -32,7 +32,7 @@ export default class Navbar extends Component {
                             >
                             About
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link
                                 activeClass="active"
