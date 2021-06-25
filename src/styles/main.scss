@@ -65,17 +65,22 @@
         }
     }
 
-    p {
-        font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 14px;
-        line-height: 25px;
-    }
-
     #center { 
         margin: auto;
         width: 35%;
         text-align: justify;
     }
+}
+
+ul > li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 25px;
 }
 
 a {

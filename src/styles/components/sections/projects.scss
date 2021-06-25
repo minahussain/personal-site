@@ -34,28 +34,26 @@
             0 12.5px 10px rgba(0, 0, 0, 0.06),
             0 22.3px 17.9px rgba(0, 0, 0, 0.072),
             0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-            0 100px 80px rgba(0, 0, 0, 0.12);
-        height: 250px;
-        width: 350px;
+            0 70px 80px rgba(0, 0, 0, 0.12);
+        filter: hue-rotate(250deg) brightness(80%) grayscale(70%);
+        width: 450px;
         top: 20px;
         left: 20px;
+    }
 
-        // img {
-        //     border-radius: 5px;
-        // }
+    .project-img:hover {
+        filter: none;
     }
     
     .card {
         position: absolute;
         z-index: 2;
-        height: 80%;
         width: 60%;
         top: 20%;
         left: 50%;
 
         .project-description {
             width: 100%;
-            height: 80%;
             margin-top: 10%;
             background-color: $dark-primary-color;
             box-shadow:
@@ -64,7 +62,7 @@
             0 12.5px 10px rgba(0, 0, 0, 0.06),
             0 22.3px 17.9px rgba(0, 0, 0, 0.072),
             0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-            0 100px 80px rgba(0, 0, 0, 0.12);
+            0 70px 60px rgba(0, 0, 0, 0.12);
 
             p {
                 padding: 1rem;
@@ -94,17 +92,28 @@
         .project-links {
             position: absolute;
             text-align: right;
-            width: 28%;
-            bottom: 0;
+            width: 32%;
+            bottom: -30px;
             right: 1rem;
+            padding-bottom: 0.5rem;
+            font-size: 1.5rem;
         }
 
         .project-tech {
             position: absolute;
             text-align: left;
             width: 68%;
-            bottom: 0;
-            left: 1rem;
+            bottom: -30px;
+            padding-left: 1rem;
+
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            li {
+                display: inline;
+                padding: 1rem;
+            }
         }
     }
 
@@ -125,19 +134,11 @@
 
         .project-img {
             display: block;
-            width: 210px;
+            width: 300px;
             min-width: 200px;
             height: 0;
             top: 0;
             left: 0;
-
-            box-shadow:
-                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-                0 12.5px 10px rgba(0, 0, 0, 0.06),
-                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-                0 100px 80px rgba(0, 0, 0, 0.12);
         }
 
         .card {

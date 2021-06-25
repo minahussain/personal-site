@@ -2,27 +2,35 @@ import React from 'react';
 import Portrait from '../../images/portrait1.png'
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 const Projects = () => {
     const data = useStaticQuery(graphql`
-    query {
-      markdownRemark(
-        filter: { fileAbsolutePath: { regex: "/projects/" } }
-      ) {
-        html
-        frontmatter {
-            date
-            title
-            cover
-            github
-            external
-            tech
-            showInProjects
+    {
+        projects: allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/projects/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                title
+                cover {
+                  childImageSharp {
+                    gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+                  }
+                }
+                tech
+                github
+                external
+              }
+              html
+            }
+          }
         }
       }
-    }
-  `);
+    `);
+
     const projects = data.projects.edges.filter(({ node }) => node);
 
     return (
@@ -37,8 +45,7 @@ const Projects = () => {
                 return (
                     <div className="project">
                         <div className="project-img">
-                            <img src={Portrait} alt="Avatar" style={{"width": "100%"}} />
-                            //<GatsbyImage image={image} alt={title} className="img" />
+                            <GatsbyImage image={image} alt={title} className="img" />
                         </div>
                         <div className="card">
                             <div className="project-title">
@@ -59,7 +66,7 @@ const Projects = () => {
                                     <a href={github} aria-label="GitHub Link">
                                     <FaGithub />
                                     </a>
-                                )}
+                                )}{" "}
                                 {external && (
                                     <a href={external} aria-label="External Link" className="external">
                                     <FaExternalLinkAlt />
