@@ -5,6 +5,7 @@ import Hero from '../components/sections/hero';
 import About from '../components/sections/about';
 import Projects from '../components/sections/projects';
 import Contact from '../components/sections/contact';
+import Footer from '../components/footer';
 // Import from a CSS file in your src
 import "../styles/main.scss"
 
@@ -18,6 +19,7 @@ const IndexPage = () => {
       <Hero />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   )
 }
