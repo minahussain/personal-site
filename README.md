@@ -9,6 +9,7 @@
 ## ✏️ TODO
 
 - Add transitions
+- Add resume link
 
 ## 🚀 Quick start
 
