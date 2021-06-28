@@ -11,7 +11,7 @@ export default class Navbar extends Component {
             <nav className="nav" id="navbar">
                 <div className="nav-content">
                     <ul className="nav-items">
-                        <li className="nav-item">
+                        <li key="logo" className="nav-item">
                             <img
                                 src=""
                                 width="24px"
@@ -21,19 +21,7 @@ export default class Navbar extends Component {
                                 onClick={this.scrollToTop}
                             />
                         </li>
-                        {/* <li className="nav-item">
-                            <Link
-                                activeClass="active"
-                                to="about"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                            About
-                            </Link>
-                        </li> */}
-                        <li className="nav-item">
+                        <li key="projects" className="nav-item">
                             <Link
                                 activeClass="active"
                                 to="projects"
@@ -45,7 +33,7 @@ export default class Navbar extends Component {
                             Projects
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        <li key="contact" className="nav-item">
                             <Link
                                 activeClass="active"
                                 to="contact"
@@ -57,7 +45,7 @@ export default class Navbar extends Component {
                             Contact
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        <li key="resume" className="nav-item">
                             <Link
                                 activeClass="active"
                                 to="resume"

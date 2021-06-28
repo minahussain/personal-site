@@ -9,4 +9,4 @@ tech:
 showInProjects: true
 ---
 
-A Chrome browser extension and Firefox addon for skincare enthusiasts. Highlight text and either use the context menu or browser icon to open a new tab with a cosDNA search of your text selection.
+A Chrome browser extension and Firefox addon for skincare enthusiasts. Highlight text and either use the context menu or browser icon to open a new tab of a cosDNA search with your text selection.

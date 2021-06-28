@@ -54,13 +54,15 @@ const Projects = () => {
                             <div className="project-description"
                                  dangerouslySetInnerHTML={{ __html: html }}>
                             </div>
-                            {tech.length && (
-                            <ul className="project-tech">
-                                {tech.map((tech, i) => (
-                                <li key={i}>{tech}</li>
-                                ))}
-                            </ul>
-                            )}
+                            <div className="project-tech">
+                              {tech.length && (
+                              <ul>
+                                  {tech.map((tech, i) => (
+                                  <li key={i}>{tech}</li>
+                                  ))}
+                              </ul>
+                              )}
+                            </div>
                             <div className="project-links">
                                 {github && (
                                     <a href={github} aria-label="GitHub Link">
