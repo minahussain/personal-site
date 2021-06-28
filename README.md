@@ -14,7 +14,10 @@
 
 1.  **Copy repo.**
 
-    Fork (copy hosted on GitHub) or clone (copy on your local computer) the repo.
+    Fork or clone the repo.
+
+    Fork: create copy of repo on github
+    Clone: create copy of repo on your local machine
    
 2.  **Start developing.**
 
