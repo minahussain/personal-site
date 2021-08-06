@@ -16,7 +16,7 @@
   background-size: cover; */
 
   .regular {
-    color: $darkest-primary-text;
+    color: $dark-primary-color;
   }
 
   #bio {
@@ -26,7 +26,7 @@
   button {
     border: none;
     border-radius: 5px; /* 5px rounded corners */
-    background-color: $light-primary-highlight;
+    background-color: $light-primary-color;
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -37,14 +37,14 @@
     cursor: pointer;
 
     a {
-      color: $light-primary-text;
+      color: $light-secondary-color;
       font-family: 'Courier New', Courier, monospace;
       font-weight: bold;
       text-decoration: none;
     }
 
     a:hover {
-      color: $dark-primary-color;
+      color: $dark-secondary-color;
       text-decoration: none;
     }
   } //end button
