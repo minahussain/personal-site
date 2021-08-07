@@ -18,7 +18,7 @@
     top: 0;
 
     h1 {
-        color: $dark-primary-color;
+        color: $accent-color;
         font-family: bebas;
         font-size: 5rem;
         letter-spacing: 0.5rem;
@@ -30,7 +30,7 @@
     }
 
     h2 {
-        color: $light-primary-color;
+        color: $white-color;
         font-family: rochester twee;
         text-align: center;
         line-height: 50px;
@@ -43,7 +43,7 @@
     }
 
     h3 {
-        color: $light-primary-color;
+        color: $white-color;
         font-family: georgia;
         line-height: 40px;
         font-size: 20px;
@@ -55,7 +55,7 @@
     }
 
     h4 {
-        color: $light-primary-color;
+        color: $black-color;
         font-family: tnanti;
         line-height: 30px;
         font-size: 25px;
@@ -81,11 +81,16 @@ p {
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
     line-height: 25px;
+    color: $black-color;
 }
 
 a {
-    color: $light-primary-color;
+    color: $white-color;
     font-family: georgia;
+}
+
+a:hover {
+    color: $accent-color;
 }
 
 @media screen and (max-width: 800px) {

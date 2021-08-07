@@ -20,14 +20,13 @@
     display: block;
     margin-left: 0rem;
     margin-right: 1rem;
-    color: $primary-link;
 
     a {
-        color: $primary-link;
+        color: $primary-color;
     }
 
     a:hover {
-        color: $light-primary-color;
+        color: $secondary-color;
         cursor: pointer;
     }
 }

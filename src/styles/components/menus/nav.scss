@@ -4,12 +4,12 @@
     top: 0;
     left: 0;
     overflow-x: hidden; /* Disable horizontal scroll */
-    background-color: $dark-primary-color;
+    background-color: $primary-color;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     z-index: 1; /* Keep navbar on top of sections */
 
     a {
-        color: $light-primary-color;
+        color: $white-color;
         font-family: georgia;
     }
 }
@@ -20,7 +20,7 @@
 
 .nav-item {
     font-family: georgia;
-    color: $light-primary-color;
+    color: $accent-color;
     font-weight: bold;
     line-height: 2.0;
     display: inline;
@@ -29,17 +29,17 @@
 }
 
 .nav-item > a {
-    color: $light-primary-color;
+    color: $white-color;
 }
 
 .nav-item > a:hover {
-    color: $peach-white-color;
-    border-bottom: 1px solid $peach-white-color;
+    color: $accent-color;
+    border-bottom: 1px solid $accent-color;
     cursor: pointer;
 }  
 
 .nav-item > .active {
-    color: $peach-white-color;
+    color: $accent-color;
 }
 
 @media screen and (max-width: 800px) {

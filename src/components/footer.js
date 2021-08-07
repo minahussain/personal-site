@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
-  background-color: #aa3c09;
+  background-color: #D5440B;
   flex-direction: column;
   height: auto;
   min-height: 70px;
