@@ -1,11 +1,11 @@
 #projects {
     background-color: $white-color;
     background-image: linear-gradient(
-      180deg,
+      150deg,
       $primary-color 0,
-      $primary-color 90%
+      $primary-color 200%,
     );
-    color: $accent-color;
+    color: $accent-highlight-lite;
     height: 100%;
     border-top: 0px;
     // -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -79,7 +79,7 @@
             top: 0;
             z-index: -1;
 
-            color: $accent-color;
+            color: $white-color;
             font-family: bebas;
             line-height: 40px;
             font-size: 40px;

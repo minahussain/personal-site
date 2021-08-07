@@ -73,19 +73,19 @@
 }
 
 ul > li {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Courier New;
     font-weight: bold;
 }
 
 p {
-    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 14px;
-    line-height: 25px;
+    font-family: Georgia;
+    font-size: 16px;
+    line-height: 30px;
     color: $black-color;
 }
 
 a {
-    color: $white-color;
+    color: $accent-highlight-lite;
     font-family: georgia;
 }
 

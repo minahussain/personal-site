@@ -22,11 +22,11 @@
     margin-right: 1rem;
 
     a {
-        color: $primary-color;
+        color: $accent-highlight-lite;
     }
 
     a:hover {
-        color: $secondary-color;
+        color: $accent-color;
         cursor: pointer;
     }
 }
