@@ -7,8 +7,6 @@ external: ''
 tech:
   - React
   - Flask
-  - Python
-  - JavaScript
 showInProjects: true
 ---
 
