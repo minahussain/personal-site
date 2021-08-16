@@ -11,6 +11,12 @@
 
 @import "./typography.css";
 
+html {
+    background-image: linear-gradient(110deg, $primary-color 30%, $accent-color 120%);
+    min-height: 100%;
+    background-attachment: fixed;
+}
+
 .main {
     position: absolute;
     width: 100%;
@@ -18,7 +24,7 @@
     top: 0;
 
     h1 {
-        color: $accent-color;
+        color: $white-color;
         font-family: bebas;
         font-size: 5rem;
         letter-spacing: 0.5rem;
@@ -36,6 +42,7 @@
         line-height: 50px;
         font-size: 40px;
         letter-spacing: 5px;
+        padding: 50px;
 
         @media screen and (max-width: 800px) {
             font-size: 30px;
@@ -55,7 +62,7 @@
     }
 
     h4 {
-        color: $black-color;
+        color: $primary-color;
         font-family: tnanti;
         line-height: 30px;
         font-size: 25px;
@@ -81,16 +88,17 @@ p {
     font-family: Georgia;
     font-size: 16px;
     line-height: 30px;
-    color: $black-color;
+    color: $white-color;
+    font-weight: bold;
 }
 
 a {
-    color: $accent-highlight-lite;
+    color: $white-color;
     font-family: georgia;
 }
 
 a:hover {
-    color: $accent-color;
+    color: $black-color;
 }
 
 @media screen and (max-width: 800px) {

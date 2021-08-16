@@ -1,14 +1,11 @@
 #contact {
-  background-image: linear-gradient(180deg, $primary-color 30%, $primary-color 100%);
-  // -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-  // clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
   padding: 6rem 15rem;
   margin-bottom: -1px;
-  color: $white-color;
+  color: $primary-color;
 
   p {
     text-align: center;
-    color: $black-color;
+    color: $primary-color;
   }
 
   a {
@@ -17,8 +14,8 @@
   }
 
   a:hover {
-    color: $accent-color;
-    border-bottom: 0 solid $accent-color;
+    color: $black-color;
+    border-bottom: 0 solid $white-color;
   }
 }
 

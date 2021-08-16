@@ -1,25 +1,21 @@
 #projects {
-    background-color: $white-color;
-    background-image: linear-gradient(
-      150deg,
-      $primary-color 0,
-      $primary-color 200%,
-    );
-    color: $accent-highlight-lite;
+    color: $white-color;
     height: 100%;
     border-top: 0px;
-    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     padding: 5rem 5rem;
-  
-    p {
-      color: $white-color;
+    background-clip: content-box;
+
+    a {
+        color: $white-highlight-lite;
+    }
+
+    a:hover {
+        color: $white-color;
     }
 
     .project {
         position: relative;
         z-index: 0;
-        //background-color: #00CCFF;
         height: 600px;
         width: 600px;
         margin: auto;
@@ -55,7 +51,7 @@
         .project-description {
             width: 100%;
             margin-top: 10%;
-            background-color: $primary-color;
+            background-image: linear-gradient(160deg, $primary-color 30%, $accent-color 120%);
             box-shadow:
             0 2.8px 2.2px rgba(0, 0, 0, 0.034),
             0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -66,11 +62,14 @@
 
             p {
                 padding: 1rem;
+                color: $white-color;
+                font-weight: bold;
             }
         }
     
         .project-title {
             background-color: $primary-highlight;
+            background-image: linear-gradient(190deg, $white-highlight 20%, $primary-highlight 100%);
             text-align: right;
             position: absolute;
             width: 95%;
@@ -109,6 +108,9 @@
             ul {
                 list-style-type: none;
                 padding-left: 0;
+                //background-color: $white-highlight;
+                background-image: linear-gradient(200deg, $white-highlight 50%, $primary-highlight 150%);
+                border-radius: 5px;
             }
             li {
                 display: inline;

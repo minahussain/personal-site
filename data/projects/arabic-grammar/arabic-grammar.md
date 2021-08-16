@@ -10,4 +10,4 @@ tech:
 showInProjects: true
 ---
 
-React + Flask app that displays the parts of speech of user-input sentence using camel-tools, an Arabic natural language processing tool
+React + Flask app that displays the parts of speech of user-input sentence using camel-tools, an Arabic natural language processing tool.

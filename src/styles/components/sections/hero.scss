@@ -3,16 +3,9 @@
   height: 100vh;
   display: block;
   border-bottom: 0px;
-  background: $primary-color;
   padding: 5.6rem;
   margin-bottom: 0;
   overflow-y: hidden;
-
-  // If you want to set a background image on the hero section, uncomment these with custom image
-
-  /* background: url("/src/assets/[your-image].png");
-  background-position: center;
-  background-size: cover; */
 
   .regular {
     color: $white-color;
@@ -25,7 +18,7 @@
   button {
     border: none;
     border-radius: 5px; /* 5px rounded corners */
-    background-color: $white-color;
+    background-color: $white-highlight-lite;
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -41,14 +34,13 @@
       font-weight: bold;
       text-decoration: none;
     }
-
-    a:hover {
-      text-decoration: none;
-    }
-  } //end button
+  } 
 
   button:hover {
-    background-color: $accent-color;
+    background-color: $white-color;
+    a {
+      color: $accent-color;
+    }
   }
 }
 
