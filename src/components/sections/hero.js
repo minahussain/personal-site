@@ -8,17 +8,19 @@ const Hero = () => {
     setTimeout(()=>setShow(true), 1000);
   }, [])
 
-  const intro = <h1 className="regular">Welcome. I'm{" "}</h1>
+  const intro = <h1 className="regular">Welcome, I'm{" "}</h1>
   const name = <h1>Mina Hussain</h1>;
   const brief = (
     <div id="bio">
-      <h3>
-        Software dev currently living in the bay area.<br />
-        I operate on coffee, observation, <br />and ~imagination~{" "}
-        <span role="img" aria-label="Rainbow emoji">
-          🌈
-        </span><br />
-      </h3>
+      <p>
+        <h3>
+          A software dev in the bay area.<br />
+          I operate on coffee, observation, <br />and ~imagination~{" "}
+          <span role="img" aria-label="Rainbow emoji">
+            🌈
+          </span><br />
+        </h3>
+      </p>
     </div>
   );
   const contact = (
