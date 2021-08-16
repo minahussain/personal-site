@@ -10,6 +10,7 @@
 
 - Add transitions
 - Add resume link
+- Cleanup sass vars
 
 ## 🚀 Quick start
 
