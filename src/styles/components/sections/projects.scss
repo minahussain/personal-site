@@ -3,7 +3,7 @@
     height: 100%;
     border-top: 0px;
     padding: 5rem 5rem;
-    background-clip: content-box;
+    //background-clip: content-box;
 
     a {
         color: $white-highlight-lite;
@@ -20,6 +20,18 @@
         width: 600px;
         margin: auto;
     }
+
+    .project-img:before {
+        z-index: 2;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: $primary-color;
+        opacity: 0.5;
+        background: -webkit-linear-gradient(90deg, $black-color, $primary-color);
+        background: linear-gradient(90deg, $black-color, $primary-color); /* The least supported option. */
+    }
     
     .project-img {
         position: absolute;
@@ -31,19 +43,14 @@
             0 22.3px 17.9px rgba(0, 0, 0, 0.072),
             0 41.8px 33.4px rgba(0, 0, 0, 0.086),
             0 70px 80px rgba(0, 0, 0, 0.12);
-        filter: hue-rotate(250deg) brightness(80%) grayscale(70%);
         width: 450px;
         margin-top: 20px;
         margin-left: 20px;
     }
-
-    .project-img:hover {
-        filter: none;
-    }
     
     .card {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         width: 60%;
         margin-top: 20%;
         margin-left: 50%;

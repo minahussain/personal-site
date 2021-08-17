@@ -1,5 +1,4 @@
 import React from 'react';
-import Portrait from '../../images/portrait1.png'
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
@@ -43,7 +42,7 @@ const Projects = () => {
                 const image = getImage(cover);
 
                 return (
-                    <div className="project">
+                    <div className="project" key={title}>
                         <div className="project-img">
                             <GatsbyImage image={image} alt={title} className="img" />
                         </div>

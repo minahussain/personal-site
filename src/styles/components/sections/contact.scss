@@ -10,12 +10,11 @@
 
   a {
     color: $white-color;   
-    font-size:$mid-font-size;
+    font-size: $mid-font-size;
   }
 
   a:hover {
     color: $black-color;
-    border-bottom: 0 solid $white-color;
   }
 }
 
