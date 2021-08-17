@@ -5,10 +5,10 @@ const Hero = () => {
   let [show, setShow] = useState(false);
 
   useEffect(() => {
-    setTimeout(()=>setShow(true), 1000);
-  }, [])
+    setTimeout(()=>setShow(true), 300);
+  }, []);
 
-  const intro = <h1 className="regular">Welcome, I'm{" "}</h1>;
+  const intro = <h1 className="regular">Welcome, I am</h1>;
   const name = <h1>Mina Hussain</h1>;
   const brief = (
     <div id="bio">
@@ -33,7 +33,7 @@ const Hero = () => {
     <section id="hero" className="jumbotron">
       <TransitionGroup component={null}>
         {items.map((item, i) => (
-          <CSSTransition in={show} key={i} classNames="fadeup" timeout={300}>
+          <CSSTransition in={show} key={i} classNames="slide" timeout={1000} unmountOnExit>
             <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
           </CSSTransition>
         ))}
