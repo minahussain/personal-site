@@ -1,16 +1,15 @@
-// https://reactcommunity.org/react-transition-group/css-transition
+/* https://reactcommunity.org/react-transition-group/css-transition */
 
 .fadeup-enter {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+    opacity: 0.01;
+    transform: translateY(-10px);
+    transition: opacity 700ms var(--easing), transform 700ms var(--easing);
 }
 
 .fadeup-enter-active {
     opacity: 1;
-    //transition: opacity 200ms;
     transform: translateY(0px);
-    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+    transition: opacity 700ms var(--easing), transform 700ms var(--easing);
 }
 
 .fadeup-exit {
@@ -18,39 +17,46 @@
 }
 
 .fadeup-exit-active {
-    opacity: 0;
-    transition: opacity 200ms;
-  }
+    opacity: 0.01;
+    transition: opacity 700ms;
+}
 
 /* Fade down */
 .fadedown-enter {
     opacity: 0.01;
     transform: translateY(-20px);
-    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+    transition: opacity 700ms var(--easing), transform 700ms var(--easing);
 }
 
 .fadedown-enter-active {
     opacity: 1;
     transform: translateY(0px);
-    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+    transition: opacity 700ms var(--easing), transform 700ms var(--easing);
 }
 
 /* Fade */
-.fade-enter {
+
+.fade-enter{
     opacity: 0;
+    visibility: hidden;
+    transition: all ease 1s;
 }
 
-.fade-enter-active {
+.fade-enter.fade-enter-active{
     opacity: 1;
-    transition: opacity 300ms var(--easing);
+    visibility: visible;
+    transition: all ease 1s;
 }
+
 .fade-exit {
-    opacity: 1;
+    visibility: visible;
+    opacity: 0;
 }
 
-.fade-exit-active {
+.fade-exit.fade-exit-active{
     opacity: 0;
-    transition: opacity 300ms var(--easing);
+    visibility: hidden;
+    transition: all ease 1s;
 }
 
 /* Slide */
@@ -63,7 +69,7 @@
 .slide-enter-active {
   opacity: 1;
   margin-left: 0;
-  transition: 500ms ease-in;
+  transition: 700ms ease-in;
 }
 
 .slide-exit {
@@ -72,7 +78,7 @@
 }
 
 .slide-exit-active {
-  opacity: 0;
+  opacity: 1;
   margin-left: 100%;
-  transition: 500ms ease-in;
+  transition: 700ms ease-in;
 }

@@ -5,7 +5,8 @@ const Hero = () => {
   let [show, setShow] = useState(false);
 
   useEffect(() => {
-    setTimeout(()=>setShow(true), 300);
+    const timeout = setTimeout(()=>setShow(true), 300);
+    return () => clearTimeout(timeout);
   }, []);
 
   const intro = <h1 className="regular">Welcome, I am</h1>;
@@ -32,9 +33,10 @@ const Hero = () => {
   return (
     <section id="hero" className="jumbotron">
       <TransitionGroup component={null}>
-        {items.map((item, i) => (
-          <CSSTransition in={show} key={i} classNames="slide" timeout={1000} unmountOnExit>
-            <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
+        { show && 
+          items.map((item, i) => (
+          <CSSTransition key={i} classNames="fade" timeout={1000} unmountOnExit>
+            <div style={{ transitionDelay: `${i + 6}00ms` }}>{item}</div>
           </CSSTransition>
         ))}
       </TransitionGroup>

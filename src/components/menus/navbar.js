@@ -21,13 +21,25 @@ export default class Navbar extends Component {
                                 onClick={this.scrollToTop}
                             />
                         </li>
+                        <li key="home" className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="hero"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                            Home
+                            </Link>
+                        </li>
                         <li key="projects" className="nav-item">
                             <Link
                                 activeClass="active"
                                 to="projects"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
+                                offset={60}
                                 duration={500}
                             >
                             Projects
@@ -46,16 +58,7 @@ export default class Navbar extends Component {
                             </Link>
                         </li>
                         <li key="resume" className="nav-item">
-                            <Link
-                                activeClass="active"
-                                to="resume"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                            Resume
-                            </Link>
+                            <button className="btn-transparent"><a href="#">Resume</a></button>
                         </li>
                     </ul>
                 </div>

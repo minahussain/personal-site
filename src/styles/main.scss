@@ -43,7 +43,7 @@ html {
         line-height: 50px;
         font-size: 40px;
         letter-spacing: 5px;
-        padding: 50px;
+        padding: 10px;
 
         @media screen and (max-width: 800px) {
             font-size: 30px;
@@ -100,6 +100,47 @@ a {
 
 a:hover {
     color: $black-color;
+}
+
+button {
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 5px; /* 5px rounded corners */
+    background-color: $white-color;
+    opacity: 0.6;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: $black-color;
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+    }
+} 
+
+button:hover {
+    opacity: 1;
+    a {
+      color: $white-color;
+    }
+}
+
+.btn-outline {
+    padding: 10px;
+    margin: 2px 2px;
+    border: 2px solid $white-color;
+    background-color: Transparent;
+}
+
+.btn-transparent {
+    padding: 5px;
+    border: none;
+    background-color: Transparent;
 }
 
 @media screen and (max-width: 800px) {
