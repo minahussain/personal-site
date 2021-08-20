@@ -1,68 +1,47 @@
-import React, { Component } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { navbarLinks } from '@config';
 
-export default class Navbar extends Component {
-    scrollToTop = () => {
-        scroll.scrollToTop();
-    };
+const Navbar = () => {
+    let [show, setShow] = useState(false);
 
-    render() {
-        return (
-            <nav className="nav" id="navbar">
-                <div className="nav-content">
-                    <ul className="nav-items">
-                        <li key="logo" className="nav-item">
-                            <img
-                                src=""
-                                width="24px"
-                                height="24px"
-                                className="nav-logo"
-                                alt="Mina."
-                                onClick={this.scrollToTop}
-                            />
-                        </li>
-                        <li key="home" className="nav-item">
-                            <Link
-                                activeClass="active"
-                                to="hero"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                            Home
-                            </Link>
-                        </li>
-                        <li key="projects" className="nav-item">
-                            <Link
-                                activeClass="active"
-                                to="projects"
-                                spy={true}
-                                smooth={true}
-                                offset={60}
-                                duration={500}
-                            >
-                            Projects
-                            </Link>
-                        </li>
-                        <li key="contact" className="nav-item">
-                            <Link
-                                activeClass="active"
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                            Contact
-                            </Link>
-                        </li>
-                        <li key="resume" className="nav-item">
-                            <button className="btn-transparent"><a href="#">Resume</a></button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        );
-    }
-}
+    useEffect(() => {
+        const timeout = setTimeout(() => {setShow(true)}, 100);
+        return () => {clearTimeout(timeout)}
+    }, []);
+
+    return (
+        <nav className="nav" id="navbar">
+            <div className="nav-content">
+                <ul className="nav-items">
+                    <TransitionGroup component={null}>
+                      { show && 
+                        navbarLinks.map(({ name, url }, i) => (
+                          <CSSTransition key={i} classNames="fade" timeout={100}>
+                            <li key={i} className="nav-item" style={{ transitionDelay: `${i * 8}00ms` }}>
+                                <Link activeClass="active" to={url} /*spy={true}*/smooth={true}>
+                                    {name}
+                                </Link>
+                            </li>
+                          </CSSTransition>
+                        ))}
+                    </TransitionGroup>
+                    <TransitionGroup component={null}>
+                        {show && (
+                          <CSSTransition classNames="fade" timeout={100}>
+                            <li key="resume" 
+                                className="nav-item" 
+                                style={{ transitionDelay: `${navbarLinks.length * 700}ms` }}>
+                                <button className="btn-transparent"><a href="#/hero">Resume</a></button>
+                            </li>
+                          </CSSTransition>
+                        )}
+                    </TransitionGroup>
+                </ul>
+            </div>
+        </nav>
+    );
+};
+
+export default Navbar;

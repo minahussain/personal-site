@@ -1,24 +1,38 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { socials } from '@config';
 
-export default class Navbar extends Component {
-    render() {
-        return (
-            <nav className="socials" id="socialsbar">
-                <div className="socials-content">
-                    <ul className="socials-items">
-                        <li className="socials-item" key="ig">
-                            <a href="https://www.instagram.com/minarrrrrt/"><FaInstagram /></a>
-                        </li>
-                        <li className="socials-item" key="li">
-                            <a href="https://www.linkedin.com/in/hussainmina/"><FaLinkedin /></a>
-                        </li>
-                        <li className="socials-item" key="gh">
-                            <a href="https://github.com/minahussain/"><FaGithub /></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        );
-    }
+const Socials = () => {
+    let [show, setShow] = useState(false);
+
+    const socialMap = [<FaInstagram />, <FaGithub />, <FaLinkedin />];
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {setShow(true)}, 1000 * 5);
+        return () => {clearTimeout(timeout)}
+    }, []);
+
+    return (
+        <nav className="socials" id="socialsbar">
+            <div className="socials-content">
+                <ul className="socials-items">
+                    <TransitionGroup component={null}>
+                      { show && 
+                        socials.map(({ key, name, url }, i) => (
+                          <CSSTransition key={i} classNames="fade" timeout={1000}>
+                            <li key={key} className="socials-item" style={{ transitionDelay: `${i * 7}00ms` }}>
+                                <a href={url} aria-label={name}>
+                                    {socialMap[i]}
+                                </a>
+                            </li>
+                          </CSSTransition>
+                        ))}
+                    </TransitionGroup>
+                </ul>
+            </div>
+        </nav>
+    );
 }
+
+export default Socials;
