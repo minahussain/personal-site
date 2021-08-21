@@ -21,7 +21,7 @@ const Socials = () => {
                       { show && 
                         socials.map(({ key, name, url }, i) => (
                           <CSSTransition key={i} classNames="fade" timeout={1000}>
-                            <li key={key} className="socials-item" style={{ transitionDelay: `${i * 7}00ms` }}>
+                            <li key={key} className="socials-item" style={{ transitionDelay: `${i * 10}00ms` }}>
                                 <a href={url} aria-label={name}>
                                     {socialMap[i]}
                                 </a>

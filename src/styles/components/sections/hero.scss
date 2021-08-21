@@ -16,15 +16,8 @@
   }
 
   button {
-    opacity: 0.6;
     padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 2px 2px;
-    transition-duration: 0.5s;
-    cursor: pointer;
+    margin: 20px 0;
 
     a {
       color: $primary-color;
