@@ -145,11 +145,6 @@ button:hover {
 }
 
 @media screen and (max-width: 800px) {
-    html {
-        background-image: none;
-        background-color: $primary-color;
-    }
-
     #main {
         width: 100%;
         display: block;
