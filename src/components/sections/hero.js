@@ -3,16 +3,22 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Hero = () => {
   let [show, setShow] = useState(false);
-  let [width, setWidth] = useState(window.innerWidth);
+  let [width, setWidth] = useState(0);
 
   function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
+    if (typeof window !== undefined) {
+      setWidth(window.innerWidth);
+    }
   }
 
   useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
+    if (typeof window !== undefined) {
+      window.addEventListener('resize', handleWindowSizeChange);
+    }
     return () => {
+      if (typeof window !== undefined) {
         window.removeEventListener('resize', handleWindowSizeChange);
+      }
     }
   }, []);
 
