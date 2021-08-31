@@ -10,4 +10,4 @@ tech:
 showInProjects: true
 ---
 
-A Django web app to "follow" another Spotify user's playlist. You can add and remove songs at your leisure! When the original playlist is altered, simply update the playlist in the web app. It will maintain any customizations by comparing your copy to the original.
+You can "follow" a playlist & add or remove songs at your leisure! The web app will maintain your customizations if the original playlist is altered.
