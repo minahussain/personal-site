@@ -40,16 +40,20 @@ const Projects = () => {
 
         return (
             <div className="project" key={title}>
-                <div className="project-img">
-                    <GatsbyImage image={image} alt={title} className="img" />
+                <div className="img-card">
+                    <div className="img-layer-one" />
+                    <div className="img-layer-two" />
+                    <div className="project-img">
+                        <GatsbyImage image={image} alt={title} className="img" />
+                    </div>
                 </div>
-                <div className="card">
-                    <div className="project-title">
-                        {title}
-                    </div>
-                    <div className="project-description"
-                         dangerouslySetInnerHTML={{ __html: html }}>
-                    </div>
+                <div className="prj-card">
+                        <div className="project-title">
+                            <h3>{title}</h3>
+                        </div>
+                        <div className="project-description"
+                             dangerouslySetInnerHTML={{ __html: html }}>
+                        </div>
                     <div className="project-tech">
                         { tech.length && (
                             <ul>
