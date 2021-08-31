@@ -1,4 +1,4 @@
-@font-face {
+  @font-face {
     font-family: "Manolete";
     src: url("../fonts/MANOLETE.ttf");
   }
@@ -21,4 +21,54 @@
   @font-face {
     font-family: "Mount Hills";
     src: url("../fonts/Mount Hills.otf");
+  }
+
+  @font-face {
+    font-family: "Muli";
+    src: url("../fonts/Mulish.ttf");
+  }
+
+  @font-face {
+    font-family: "Muli Black";
+    src: url("../fonts/Mulish/Mulish-Black.ttf");
+  }
+
+  @font-face {
+    font-family: "Muli Bold";
+    src: url("../fonts/Mulish/Mulish-Bold.ttf");
+  }
+
+  @font-face {
+    font-family: "Muli ExtraBold";
+    src: url("../fonts/Mulish/Mulish-ExtraBold.ttf");
+  }
+
+  @font-face {
+    font-family: "Muli ExtraBoldItalic";
+    src: url("../fonts/Mulish/Mulish-ExtraBoldItalic.ttf");
+  }
+
+  @font-face {
+    font-family: "Muli BlackItalic";
+    src: url("../fonts/Mulish/Mulish-BlackItalic.ttf");
+  }
+
+  @font-face {
+    font-family: "Space Mono";
+    src: url("../fonts/SpaceMono-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Space Mono Bold";
+    src: url("../fonts/SpaceMono-Bold.ttf");
+  }
+
+  @font-face {
+    font-family: "Space Mono Italic";
+    src: url("../fonts/SpaceMono-Italic.ttf");
+  }
+
+  @font-face {
+    font-family: "Space Mono BoldItalic";
+    src: url("../fonts/SpaceMono-BoldItalic.ttf");
   }

@@ -12,9 +12,10 @@
 @import "./typography.css";
 
 html {
-    background-color: $primary-color;
-    background-image: linear-gradient(110deg, $primary-color 30%, $accent-color 120%);
+    background-color: $black-color;
+    //background-image: linear-gradient(110deg, $primary-color 30%, $accent-color 120%);
     min-height: 100%;
+    min-width: 100%;
     background-attachment: fixed;
 }
 
@@ -26,81 +27,104 @@ html {
 
     h1 {
         color: $white-color;
-        font-family: bebas;
+        font-family: 'Muli Black', sans-serif;
+        font-weight: bold;
         font-size: 5rem;
-        letter-spacing: 0.5rem;
+        letter-spacing: 0.2rem;
         margin: 0;
 
         @media screen and (max-width: 800px) {
             font-size: 3rem;
+            letter-spacing: 0.1rem;
+            justify-items: space-around;
+            margin: 0 1rem;
         }
     }
 
     h2 {
         color: $white-color;
-        font-family: rochester twee;
+        font-family: 'Muli ExtraBoldItalic', sans-serif;
         text-align: center;
-        line-height: 50px;
-        font-size: 40px;
-        letter-spacing: 5px;
-        padding-top: 5rem;
+        line-height: 3rem;
+        font-size: 3rem;
+        letter-spacing: 0.1rem;
+        padding: 3rem 0;
 
         @media screen and (max-width: 800px) {
-            font-size: 30px;
+            font-size: 2.5rem;
+            letter-spacing: 0.1rem;
+            margin: 1rem;
         }
     }
 
     h3 {
         color: $white-color;
-        font-family: georgia;
-        line-height: 40px;
-        font-size: 20px;
-        letter-spacing: 3px;
-        padding: 20px 0;
+        font-family: Muli, sans-serif;
+        letter-spacing: 0.1rem;
+        line-height: 2.5rem;
+        font-size: 2rem;
+        padding: 0.3rem;
+        margin: 0;
 
         @media screen and (max-width: 800px) {
-            font-size: 14px;
+            font-size: 1.5rem;
         }
     }
 
     h4 {
-        color: $primary-color;
-        font-family: tnanti;
-        line-height: 30px;
-        font-size: 25px;
+        color: $white-color;
+        font-family: 'Space Mono', monospace;
+        letter-spacing: 0.2rem;
+        line-height: 2rem;
+        font-size: 1.5rem;
 
         @media screen and (max-width: 800px) {
-            font-size: 18px;
+            font-size: 1rem;
+            padding: 2rem 1rem;
+            margin: 2rem 0;
+        }
+    }
+
+    h5 {
+        color: $white-color;
+        font-family: 'Space Mono', monospace;
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+        line-height: 20px;
+        font-size: 18px;
+        letter-spacing: 0.3rem;
+
+        @media screen and (max-width: 800px) {
+            margin: 0 1rem;
         }
     }
 
     #center { 
         margin: auto;
-        width: 35%;
+        padding: 0 20%;
         text-align: justify;
     }
 }
 
 ul > li {
-    font-family: Courier New;
-    font-weight: bold;
+    font-family: 'Space Mono', monospace;
 }
 
 p {
-    font-family: Georgia;
-    font-size: 16px;
-    line-height: 30px;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: $white-color;
-    font-weight: bold;
 }
 
 a {
     color: $white-color;
-    font-family: georgia;
+    font-family: 'Space Mono', monospace;
 }
 
 a:hover {
-    color: $black-color;
+    color: $accent-color;
 }
 
 button {
@@ -108,18 +132,18 @@ button {
     border: none;
     border-radius: 5px; /* 5px rounded corners */
     background-color: $white-color;
-    opacity: 0.6;
+    opacity: 0.9;
     text-align: center;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
     transition-duration: 0.5s;
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-family: 'Space Mono BoldItalic', monospace;
     color: $black-color;
 
     a {
-        color: $primary-color;
+        color: $black-color;
+        font-family: 'Space Mono BoldItalic', monospace;
         text-decoration: none;
     }
 } 
@@ -127,14 +151,14 @@ button {
 button:hover {
     opacity: 1;
     a {
-      color: $white-color;
+      color: $primary-color;
     }
 }
 
 .btn-outline {
     padding: 10px;
     margin: 2px 2px;
-    border: 2px solid $white-color;
+    border: 2px solid $primary-color;
     background-color: Transparent;
 }
 
@@ -146,7 +170,7 @@ button:hover {
 
 @media screen and (max-width: 800px) {
     #main {
-        width: 100%;
+        width: 100vw;
         display: block;
     }
 }
