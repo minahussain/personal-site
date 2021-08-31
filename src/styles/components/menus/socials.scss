@@ -8,7 +8,7 @@
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     z-index: 1; /* Keep navbar on top of sections */
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 595px) {
         display: none;
     }
 }
