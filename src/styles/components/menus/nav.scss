@@ -2,56 +2,186 @@
     width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
-    background-image: linear-gradient(110deg, $primary-color 30%, $accent-color 120%);
+    background-color: $black-color;
+    //background-image: linear-gradient(110deg, $primary-color 30%, $accent-color 120%);
     overflow-x: hidden; /* Disable horizontal scroll */
     z-index: 1; /* Keep navbar on top of sections */
 
-    a {
-        color: $white-color;
-        font-family: georgia;
+    button {
+        background-color: transparent;
+        position: absolute;
+        color: $primary-color;
+    }
+
+    @media screen and (max-width: 800px) {
+        position: relative;
+        top: 0;
+        height: 4rem;
+    }
+}
+
+.nav-menu {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media screen and (max-width: 800px) {
+        width: 0;
+        height: 0;
+    }
+}
+
+.hamburger-button {
+    visibility: hidden;
+    display: none;
+    position: absolute;
+
+    @media screen and (max-width: 800px) {
+        visibility: visible;
+        display: flex;
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        z-index: 3;
     }
 }
 
 .nav-content {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    left: 0;
+    width: 85%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+
+    @media screen and (max-width: 800px) {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        text-align: center;
+    }
+}
+
+.nav-button {
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        border-radius: 0;
+        border: solid 2px;
+        padding: 0.4rem 1.8rem;
+    }
+
+    button:hover {
+        background-color: $primary-color;
+        a {
+            color: $black-color;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        letter-spacing: 0.02em;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        align-items: center;
+        width: 100vw;
+        height: 20vh;
+        bottom: 1rem;
+    }
 }
 
 .nav-item {
-    font-family: georgia;
     color: $white-color;
-    font-weight: bold;
-    line-height: 2.0;
-    margin-left: 0rem;
-    margin-right: 1rem;
-    display: inline;
-    position: relative;
+    line-height: 1.0;
+    margin-left: 2rem;
+    display: flex;
+
+    @media screen and (max-width: 800px) {
+        letter-spacing: 0.02em;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        line-height: 5rem;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+
+        button {
+            border-radius: 0;
+            border: solid 2px;
+            padding: 1rem 3rem;
+        }
+
+        button > a {
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .nav-item > a {
     color: $white-color;
+    cursor: pointer;
 }
 
-.nav-item > a:hover {
-    color: $black-color;
+.nav-item > .active {
+    color: $white-color;
     cursor: pointer;
 }  
 
-.nav-item > .active {
-    color: $black-color;
-    border-bottom: 1px solid $black-color;
+.nav-item > a:hover {
+    color: $white-color;
+    border-bottom: 1px solid $white-color;
+
+    @media screen and (max-width: 800px) {
+        border-bottom: none;
+    }
 }
 
 .nav-item > button > a {
-    color: $white-color;
+    color: $primary-color;
 }
 
 @media screen and (max-width: 800px) {
-    .nav {
-        width: 100%;
+    .noscroll {
+        overflow: hidden;
     }
 
-    .nav-content {
-        text-align: left;
+    .nav.showMenu {
+        height: 100vh;
+        min-height: 100vh;
+        width: 100%;
+        position: fixed;
+        display: flex;
+        right: 0;
+        top: 0;
+    }
+
+    .nav-menu.showMenu {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-content.showMenu {
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        position: fixed;
+        left: auto;
     }
 }
