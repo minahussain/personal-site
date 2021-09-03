@@ -20,7 +20,7 @@ const Hero = () => {
   }, [isBrowser]);
 
   useEffect(() => {
-    const factor = isDesktop ? 11 : 1;
+    const factor = isDesktop ? 11 : 2;
     const timeout = setTimeout(() => {setShow(true)}, 300 * factor);
     return () => {clearTimeout(timeout)};
   }, [isDesktop]);
