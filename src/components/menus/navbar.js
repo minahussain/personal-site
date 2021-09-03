@@ -11,7 +11,7 @@ const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false)
 
     useEffect(() => {
-        const timeout = setTimeout(() => {setShow(true)}, 100);
+        const timeout = setTimeout(() => {setShow(true)}, 200);
         return () => {clearTimeout(timeout)}
     }, []);
 
@@ -41,7 +41,7 @@ const Navbar = () => {
                         <TransitionGroup component={null}>
                           { show && 
                             navbarLinks.map(({ name, url }, i) => (
-                              <CSSTransition key={i} classNames="fade" timeout={100}>
+                              <CSSTransition key={i} classNames="fade" timeout={300}>
                                 <li key={i} className="nav-item" style={{ transitionDelay: `${i * 8}00ms` }}>
                                     <Link 
                                         activeClass="active" 
@@ -59,9 +59,9 @@ const Navbar = () => {
                     </ul>
                     <TransitionGroup component={null}>
                         { show && (
-                            <CSSTransition classNames="fade" timeout={1000}>
+                            <CSSTransition classNames="fade" timeout={300}>
                               <div key="resume" className="nav-button nav-item" 
-                                style={{ transitionDelay: `${navbarLinks.length * 700}ms` }}>
+                                style={{ transitionDelay: `${navbarLinks.length * 8}00ms` }}>
                                     <button><a href="#/hero">Resume</a></button>
                                 </div>
                             </CSSTransition>

@@ -2,32 +2,28 @@ import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Hero = () => {
-  let [show, setShow] = useState(false);
-  let [width, setWidth] = useState(0);
+  const [show, setShow] = useState(false);
+  const [isDesktop, setDesktop] = useState(false);
+  const isBrowser = typeof window !== "undefined";
 
   function handleWindowSizeChange() {
-    if (typeof window !== undefined) {
-      setWidth(window.innerWidth);
+    if (isBrowser) console.log("inside handleWindowSizeChange and isBrowser is true");
+    if (isBrowser) {
+      setDesktop(window.innerWidth > 800);
+      console.log("desktop: " + isDesktop + " window innerWidth: " + window.innerWidth);
     }
   }
 
   useEffect(() => {
-    if (typeof window !== undefined) {
-      window.addEventListener('resize', handleWindowSizeChange);
-    }
-    return () => {
-      if (typeof window !== undefined) {
-        window.removeEventListener('resize', handleWindowSizeChange);
-      }
-    }
-  }, []);
-
-  let mobileCount = (width <= 800) ? 1 : 10;
+    if (isBrowser) console.log("inside useEffect and isBrowser is true");
+    if (isBrowser) setDesktop(window.innerWidth > 800);
+  }, [isBrowser]);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {setShow(true)}, 300 * mobileCount);
+    const factor = isDesktop ? 11 : 1;
+    const timeout = setTimeout(() => {setShow(true)}, 300 * factor);
     return () => {clearTimeout(timeout)};
-  }, []);
+  }, [isDesktop]);
 
   const intro = <h5>Welcome, I am</h5>;
   const name = <h1>Mina Hussain</h1>;
@@ -52,14 +48,14 @@ const Hero = () => {
 
   return (
     <section id="hero" className="jumbotron">
-      <TransitionGroup component={null}>
-        { show && 
-          items.map((item, i) => (
-          <CSSTransition key={i} classNames="dropdown" timeout={300} unmountOnExit>
-            <div style={{ transitionDelay: `${i * 6}00ms` }}>{item}</div>
-          </CSSTransition>
-        ))}
-      </TransitionGroup>
+        <TransitionGroup component={null}>
+          { show && 
+            items.map((item, i) => (
+            <CSSTransition key={i} classNames="dropup" timeout={300} unmountOnExit>
+              <div style={{ transitionDelay: `${i * 10}00ms` }}>{item}</div>
+            </CSSTransition>
+          ))}
+        </TransitionGroup>
     </section>
   );
 };
