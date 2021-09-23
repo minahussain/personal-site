@@ -1,6 +1,6 @@
 ---
 date: '2021-08-13'
-title: 'Arabic Grammar'
+title: 'GrammAr'
 cover: './demo.png'
 github: 'https://github.com/minahussain/arabic-grammar'
 external: ''
