@@ -3,7 +3,6 @@
     position: fixed;
     top: 0;
     background-color: $black-color;
-    //background-image: linear-gradient(110deg, $primary-color 30%, $accent-color 120%);
     overflow-x: hidden; /* Disable horizontal scroll */
     z-index: 1; /* Keep navbar on top of sections */
 
@@ -22,7 +21,7 @@
 
 .nav-menu {
     width: 100%;
-    height: 80px;
+    height: 50px;
     overflow: hidden;
     display: flex;
     flex-grow: 1;
@@ -55,7 +54,7 @@
 .nav-content {
     display: flex;
     justify-content: flex-end;
-    left: 0;
+    left: -15px;
     width: 85%;
     margin: 0;
     padding: 0;
@@ -70,6 +69,7 @@
 }
 
 .nav-button {
+    display: flex;
     width: 15%;
     justify-content: center;
     align-items: center;
@@ -78,6 +78,12 @@
         border-radius: 0;
         border: solid 2px;
         padding: 0.4rem 1.8rem;
+        margin-right: 10px;
+
+        a {
+            color: $primary-color;
+            font-size: $tiny-font-size;
+        }
     }
 
     button:hover {
@@ -94,27 +100,35 @@
         position: fixed;
         align-items: center;
         width: 100vw;
-        height: 100vh;
+        height: 30vh;
+        bottom: 2rem;
+
+        button {
+            margin: 0;
+        }
     }
 }
 
 .nav-item {
     color: $white-color;
+    font-size: $tiny-font-size;
     line-height: 1.0;
     margin-left: 2rem;
     display: flex;
+    height: 15px;
 
     @media screen and (max-width: 800px) {
         letter-spacing: 0.02em;
         padding: 0 0 1rem 0;
         margin: 0;
         box-sizing: border-box;
-        font-size: 1.5rem;
+        font-size: $big-default-font-size;
         line-height: 5rem;
-        justify-content: flex-end;
+        justify-content: center;
         flex-direction: column;
         align-items: center;
         width: 100vw;
+        height: auto;
 
         button {
             border-radius: 0;
@@ -123,14 +137,19 @@
         }
 
         button > a {
-            font-size: 1.5rem;
+            font-size: $default-font-size;
         }
     }
 }
 
 .nav-item > a {
     color: $white-color;
+    font-size: $tiny-font-size;
     cursor: pointer;
+
+    @media screen and (max-width: 800px) {
+        font-size: $default-font-size;
+    }
 }
 
 .nav-item > .active {
@@ -145,10 +164,6 @@
     @media screen and (max-width: 800px) {
         border-bottom: none;
     }
-}
-
-.nav-item > button > a {
-    color: $primary-color;
 }
 
 @media screen and (max-width: 800px) {
@@ -175,12 +190,13 @@
 
     .nav-content.showMenu {
         width: 100vw;
-        height: 100vh;
+        height: 70vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 0;
         position: fixed;
         left: auto;
+        top: 0;
     }
 }

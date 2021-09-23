@@ -22,6 +22,7 @@ html {
 .main {
     position: absolute;
     width: 100%;
+    //overflow: hidden;
     left: 0;
     top: 0;
 
@@ -29,15 +30,17 @@ html {
         color: $white-color;
         font-family: 'Muli Black', sans-serif;
         font-weight: bold;
-        font-size: 5rem;
+        font-size: $biggest-font-size;
         letter-spacing: 0.2rem;
         margin: 0;
 
         @media screen and (max-width: 800px) {
-            font-size: 3rem;
+            display: flex;
+            font-size: $big-font-size;
             letter-spacing: 0.1rem;
             justify-items: space-around;
             margin: 0 1rem;
+            text-align: center;
         }
     }
 
@@ -46,12 +49,14 @@ html {
         font-family: 'Muli ExtraBoldItalic', sans-serif;
         text-align: center;
         line-height: 3rem;
-        font-size: 3rem;
+        font-size: $big-font-size;
         letter-spacing: 0.1rem;
         padding: 3rem 0;
+        justify-content: center;
 
         @media screen and (max-width: 800px) {
-            font-size: 2.5rem;
+            display: flex;
+            font-size: $mid-font-size;
             letter-spacing: 0.1rem;
             margin: 1rem;
         }
@@ -62,12 +67,12 @@ html {
         font-family: Muli, sans-serif;
         letter-spacing: 0.1rem;
         line-height: 2.5rem;
-        font-size: 2rem;
+        font-size: $mid-font-size;
         padding: 0.3rem;
         margin: 0;
 
         @media screen and (max-width: 800px) {
-            font-size: 1.5rem;
+            display: flex;
         }
     }
 
@@ -76,12 +81,12 @@ html {
         font-family: 'Space Mono', monospace;
         letter-spacing: 0.2rem;
         line-height: 2rem;
-        font-size: 1.5rem;
+        font-size: $default-font-size;
 
         @media screen and (max-width: 800px) {
-            font-size: 1rem;
-            padding: 2rem 1rem;
-            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            font-size: $small-font-size;
         }
     }
 
@@ -92,11 +97,11 @@ html {
         padding: 0;
         margin: 0;
         line-height: 20px;
-        font-size: 18px;
+        font-size: $small-font-size;
         letter-spacing: 0.3rem;
 
         @media screen and (max-width: 800px) {
-            margin: 0 1rem;
+            display: flex;
         }
     }
 
@@ -113,13 +118,14 @@ ul > li {
 
 p {
     font-family: 'Space Mono', monospace;
-    font-size: 1rem;
+    font-size: $small-font-size;
     line-height: 1.5rem;
     color: $white-color;
 }
 
 a {
     color: $white-color;
+    font-size: $small-font-size;
     font-family: 'Space Mono', monospace;
 }
 
@@ -134,9 +140,8 @@ button {
     background-color: $white-color;
     opacity: 0.9;
     text-align: center;
-    display: inline-block;
-    font-size: 1rem;
-    transition-duration: 0.5s;
+    display: inline-flex;
+    font-size: $small-font-size;
     cursor: pointer;
     font-family: 'Space Mono BoldItalic', monospace;
     color: $black-color;
@@ -168,9 +173,17 @@ button:hover {
     background-color: Transparent;
 }
 
+.footer {
+    font-size: $tiny-font-size;
+
+    a {
+        font-size: $tiny-font-size;
+    }
+}
+
 @media screen and (max-width: 800px) {
-    #main {
-        width: 100vw;
-        display: block;
+    .main {
+        display: flex;
+        flex-direction: column;
     }
 }

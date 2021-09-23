@@ -54,26 +54,28 @@ const Projects = () => {
                         <div className="project-description"
                              dangerouslySetInnerHTML={{ __html: html }}>
                         </div>
-                    <div className="project-tech">
-                        { tech.length && (
-                            <ul>
-                                { tech.map((tech, i) => (
-                                    <li key={i}>{tech}</li>
-                                ))}
-                            </ul>
-                        )}
-                    </div>
-                    <div className="project-links">
-                        {github && (
-                            <a href={github} aria-label="GitHub Link">
-                            <FaGithub />
-                            </a>
-                        )}{" "}
-                        {external && (
-                            <a href={external} aria-label="External Link" className="external">
-                            <FaExternalLinkAlt />
-                            </a>
-                        )}
+                    <div className="prj-footer">
+                        <div className="project-tech">
+                            { tech.length && (
+                                <ul>
+                                    { tech.map((tech, i) => (
+                                        <li key={i}>{tech}</li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+                        <div className="project-links">
+                            {github && (
+                                <a href={github} aria-label="GitHub Link">
+                                <FaGithub />
+                                </a>
+                            )}{" "}
+                            {external && (
+                                <a href={external} aria-label="External Link" className="external">
+                                <FaExternalLinkAlt />
+                                </a>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

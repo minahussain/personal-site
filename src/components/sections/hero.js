@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import styled from 'styled-components';
+
+const mobileStyledDiv = styled.div`
+  dispay: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 
 const Hero = () => {
   const [show, setShow] = useState(false);
@@ -25,23 +33,22 @@ const Hero = () => {
     return () => {clearTimeout(timeout)};
   }, [isDesktop]);
 
-  const intro = <h5>Welcome, I am</h5>;
-  const name = <h1>Mina Hussain</h1>;
+  const intro = <div className="intro"><h5>Welcome, I am</h5></div>;
+  const name = <div className="name"><h1>Mina Hussain</h1></div>;
   const brief = (
-    <div id="bio">
+    <div className="bio">
       <h4>
-        A software dev in the bay area.<br />
-        I operate on coffee, observation, <br />and ~imagination~{" "}
-        <span role="img" aria-label="Rainbow emoji">
+        A software dev in the bay area. Operating on coffee, observation, and ~imagination~{" "}<span role="img" aria-label="Rainbow emoji">
           🌈
-        </span><br />
+        </span>
       </h4>
     </div>
   );
   const contact = (
-    <button><a href={`mailto:saminahu@gmail.com`}>
-      Get In Touch
-    </a></button>
+    <div className="contact">
+      <button><a href={`mailto:saminahu@gmail.com`}>
+      Get In Touch</a></button>
+    </div>
   );
 
   const items = [intro, name, brief, contact];

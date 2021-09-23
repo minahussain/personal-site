@@ -22,9 +22,9 @@ const Footer = () => {
   return (
     <StyledFooter>
       <StyledCredit tabindex="-1">
-        <a href="https://github.com/minahussain/personal-site">
+        <div className="footer"><a href="https://github.com/minahussain/personal-site">
           <div>Designed &amp; Built by Mina Hussain</div>
-        </a>
+        </a></div>
       </StyledCredit>
     </StyledFooter>
   );
