@@ -54,7 +54,7 @@
 .dropdown-enter {
     opacity: 0;
     margin-top: -5%;
-    transition: margin-top 2s ease-out, opacity 2s ease;
+    transition: margin-top 2s ease-in, opacity 2s ease;
 }
 .dropdown-enter-active {
     opacity: 1;
@@ -63,11 +63,11 @@
 .dropdown-exit {
     opacity: 1;
     margin-top: 0;
-    transition: margin-top 2s ease-in, opacity 2s ease;
+    transition: margin-top 2s ease-out, opacity 2s ease;
 }
 .dropdown-exit-active {
     opacity: 0;
-    margin-top: 10%;
+    margin-top: 0;
 }
 
 /* Drop up */
@@ -88,5 +88,5 @@
 }
 .dropup-exit-active {
     opacity: 0;
-    margin-top: -5%;
+    margin-top: 0%;
 }

@@ -58,7 +58,7 @@ const Hero = () => {
         <TransitionGroup component={null}>
           { show && 
             items.map((item, i) => (
-            <CSSTransition key={i} classNames="dropup" timeout={300} unmountOnExit>
+            <CSSTransition key={i} classNames="fade" timeout={300} unmountOnExit>
               <div style={{ transitionDelay: `${i * 10}00ms` }}>{item}</div>
             </CSSTransition>
           ))}

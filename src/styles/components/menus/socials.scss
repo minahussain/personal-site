@@ -3,7 +3,7 @@
     position: fixed;
     top: 7rem;
     right: 0.5rem;
-    font-size: 1.5rem;
+    font-size: $mid-font-size;
     overflow-y: hidden; /* Disable vertical scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     z-index: 0; /* Keep navbar on top of sections but below project links */

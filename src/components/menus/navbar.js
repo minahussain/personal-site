@@ -42,7 +42,7 @@ const Navbar = () => {
                           { show && 
                             navbarLinks.map(({ name, url }, i) => (
                               <CSSTransition key={i} classNames="fade" timeout={300}>
-                                <li key={i} className="nav-item" style={{ transitionDelay: `${i * 8}00ms` }}>
+                                <li key={i} className="nav-item" style={{ transitionDelay: `${i * 7}00ms` }}>
                                     <Link 
                                         activeClass="active" 
                                         to={url} 
@@ -61,7 +61,7 @@ const Navbar = () => {
                         { show && (
                             <CSSTransition classNames="fade" timeout={300}>
                               <div key="resume" className="nav-button nav-item" 
-                                style={{ transitionDelay: `${navbarLinks.length * 8}00ms` }}>
+                                style={{ transitionDelay: `${navbarLinks.length * 7}00ms` }}>
                                     <button><a href="#/hero">Resume</a></button>
                                 </div>
                             </CSSTransition>
