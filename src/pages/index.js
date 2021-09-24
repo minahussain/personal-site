@@ -1,6 +1,5 @@
 import * as React from "react"
 import Navbar from '../components/menus/navbar';
-import Socials from '../components/menus/socials';
 import Hero from '../components/sections/hero';
 import Projects from '../components/sections/projects';
 import Contact from '../components/sections/contact';
@@ -13,7 +12,6 @@ const IndexPage = () => {
   return (
     <div className="main">
       <Navbar />
-      <Socials />
       <title>Mina Hussain</title>
       <Hero />
       <Projects />
