@@ -54,9 +54,9 @@
 .nav-content {
     display: flex;
     justify-content: flex-end;
-    left: -15px;
+    gap: 25px;
+    margin: 0 15px 0 0;
     width: 85%;
-    margin: 0;
     padding: 0;
     position: fixed;
 
@@ -70,7 +70,7 @@
 
 .nav-button {
     display: flex;
-    width: 15%;
+    width: 120px;
     justify-content: center;
     align-items: center;
 
@@ -113,7 +113,7 @@
     color: $white-color;
     font-size: $tiny-font-size;
     line-height: 1.0;
-    margin-left: 2rem;
+    //margin-left: 2rem;
     display: flex;
     height: 18px;
 

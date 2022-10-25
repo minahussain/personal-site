@@ -37,6 +37,7 @@ const Navbar = () => {
                             <FiMenu style={{ color: "#fff", width: "40px", height: "40px" }} />
                         )}
                     </button>
+
                     <ul className={`nav-content ${navbarOpen ? " showMenu" : ""}`}>
                         <TransitionGroup component={null}>
                           { show && 
@@ -56,17 +57,17 @@ const Navbar = () => {
                               </CSSTransition>
                             ))}
                         </TransitionGroup>
+                        <TransitionGroup component={null}>
+                            { show && (
+                                <CSSTransition classNames="fade" timeout={300}>
+                                  <li key="resume" className="nav-button nav-item"
+                                    style={{ transitionDelay: `${navbarLinks.length * 7}00ms` }}>
+                                        <button><a href="#/hero">Resume</a></button>
+                                    </li>
+                                </CSSTransition>
+                            )}
+                        </TransitionGroup>
                     </ul>
-                    <TransitionGroup component={null}>
-                        { show && (
-                            <CSSTransition classNames="fade" timeout={300}>
-                              <div key="resume" className="nav-button nav-item" 
-                                style={{ transitionDelay: `${navbarLinks.length * 7}00ms` }}>
-                                    <button><a href="#/hero">Resume</a></button>
-                                </div>
-                            </CSSTransition>
-                        )}
-                    </TransitionGroup>
                 </div>
             </nav>
         </>
