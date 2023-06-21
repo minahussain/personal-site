@@ -12,23 +12,16 @@ const mobileStyledDiv = styled.div`
 
 const Hero = () => {
   const [show, setShow] = useState(false);
-  const [isDesktop, setDesktop] = useState(false);
-  const isBrowser = typeof window !== "undefined";
 
   useEffect(() => {
-    if (isBrowser) console.log("inside useEffect and isBrowser is true");
-    if (isBrowser) setDesktop(window.innerWidth > 800);
-  }, [isBrowser]);
-
-  useEffect(() => {
-    const factor = isDesktop ? 11 : 2;
+    const factor = 7;
     const timeout = setTimeout(() => {
       setShow(true);
     }, 200 * factor);
     return () => {
       clearTimeout(timeout);
     };
-  }, [isDesktop]);
+  });
 
   const name = (
     <div className="name">
