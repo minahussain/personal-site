@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 
 export const Frame = ({ frameRef, getFrameSize, children }) => {
   // Update 'width' and 'height' when the window resizes
-  useEffect(() => {
-    window.addEventListener("resize", getFrameSize);
-
-    return () => {
-      window.removeEventListener("resize");
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("resize", getFrameSize);
+  //
+  //   return () => {
+  //     window.removeEventListener("resize");
+  //   };
+  // }, []);
 
   return (
     <div
