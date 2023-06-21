@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link } from "gatsby";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
