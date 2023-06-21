@@ -1,30 +1,28 @@
-import React from 'react';
-import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import React from "react";
+import { FaInstagram, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const Contact = () => {
-
   return (
-    <section id="contact" className="jumbotron">
-        <h2>Contact</h2>
-        <div id="center">
-            <p>
-                <a href="https://www.instagram.com/minarrrrrt/"
-                    aria-label="Instagram Button">
-                        <FaInstagram />
-                </a>{" "}
-
-                <a href="https://www.linkedin.com/in/hussainmina/"
-                    aria-label="LinkedIn Button">
-                        <FaLinkedin />
-                </a>{" "}
-
-                <a href="https://github.com/minahussain/"
-                    aria-label="GitHub Button">
-                        <FaGithub />
-                </a>{" "}
-            </p>
-        </div>
-    </section>
+    <p>
+      <a
+        href="https://www.linkedin.com/in/hussainmina/"
+        aria-label="LinkedIn Button"
+      >
+        <FaLinkedin size={35} />
+      </a>{" "}
+      <a href="https://github.com/minahussain/" aria-label="GitHub Button">
+        <FaGithub size={35} />
+      </a>{" "}
+      <a
+        href="https://www.instagram.com/minarrrrrt/"
+        aria-label="Instagram Button"
+      >
+        <FaInstagram size={35} />
+      </a>{" "}
+      <a href="https://www.twitter.com/minab1n" aria-label="Twitter Button">
+        <FaTwitter size={35} />
+      </a>{" "}
+    </p>
   );
 };
 
