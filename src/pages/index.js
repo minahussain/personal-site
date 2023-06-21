@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Projects from "../components/sections/projects";
+import Projects from "../pages/portfolio";
 import NotFoundPage from "./404";
 import Resume from "./resume";
 import "../styles/main.scss";
@@ -14,7 +14,7 @@ const IndexPage = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Hero />} />
-          <Route path="/code" element={<Projects />} />
+          <Route path="/portfolio" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
           <Route path={"*"} element={<NotFoundPage />} />
         </Routes>
