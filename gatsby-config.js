@@ -17,14 +17,6 @@ module.exports = {
       },
     },
     {
-      resolve: "@mkitio/gatsby-theme-password-protect",
-      options: {
-        partialMatching: true,
-        pagePaths: ["/resume"],
-        password: "aNtQV9?Pyh", // delete or `undefined` to disable password protection
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
     },
     {
