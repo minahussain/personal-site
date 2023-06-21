@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-const Projects = () => {
+const Portfolio = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -146,4 +146,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Portfolio;

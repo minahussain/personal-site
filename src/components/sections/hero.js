@@ -14,7 +14,7 @@ const Hero = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const factor = 7;
+    const factor = 5;
     const timeout = setTimeout(() => {
       setShow(true);
     }, 200 * factor);
