@@ -16,6 +16,11 @@ section {
         section {
             width: 100%;
             display: flex;
+            padding: 2rem;
+            height: calc(100% - 60px);
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
         }
     }
 }

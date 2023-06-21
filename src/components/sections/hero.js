@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
-import Contact from "./contact";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const mobileStyledDiv = styled.div`
   dispay: flex;
@@ -58,10 +58,60 @@ const Hero = () => {
 
   return (
     <section id="hero" className="jumbotron">
-      {items.map((item, i) => (
-        <div>{item}</div>
-      ))}
-      <Contact />
+      <TransitionGroup component={null}>
+        {show &&
+          items.map((item, i) => (
+            <CSSTransition
+              key={`hero-transition-${i}`}
+              classNames="fade"
+              timeout={300}
+            >
+              <div
+                key={`hero-item-${i}`}
+                style={{ transitionDelay: `${i * 7}00ms` }}
+              >
+                {item}
+              </div>
+            </CSSTransition>
+          ))}
+        {show && (
+          <CSSTransition
+            key={`hero-transition-${items.length}`}
+            classNames="slide"
+            timeout={300}
+          >
+            <p
+              key={`hero-item-${items.length}`}
+              style={{ transitionDelay: `${items.length * 5}00ms` }}
+            >
+              <a
+                href="https://www.linkedin.com/in/hussainmina/"
+                aria-label="LinkedIn Button"
+              >
+                <FaLinkedin size={40} />
+              </a>{" "}
+              <a
+                href="https://github.com/minahussain/"
+                aria-label="GitHub Button"
+              >
+                <FaGithub size={40} />
+              </a>{" "}
+              <a
+                href="https://www.instagram.com/minarrrrrt/"
+                aria-label="Instagram Button"
+              >
+                <FaInstagram size={40} />
+              </a>{" "}
+              <a
+                href="https://www.twitter.com/minab1n"
+                aria-label="Twitter Button"
+              >
+                <FaTwitter size={40} />
+              </a>{" "}
+            </p>
+          </CSSTransition>
+        )}
+      </TransitionGroup>
     </section>
   );
 };
