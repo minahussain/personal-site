@@ -44,8 +44,8 @@ const Navbar = () => {
       <Helmet>
         <body className={navbarOpen ? "noscroll" : ""} />
       </Helmet>
-      <nav className={`nav ${navbarOpen ? " showMenu" : ""}`} id="navbar">
-        <div className={`nav-menu ${navbarOpen ? " showMenu" : ""}`}>
+      <nav className={`nav ${navbarOpen ? "showMenu" : ""}`} id="navbar">
+        <div className={`nav-menu ${navbarOpen ? "showMenu" : ""}`}>
           <button className="hamburger-button" onClick={handleToggle}>
             {navbarOpen ? (
               <MdClose

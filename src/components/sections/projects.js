@@ -112,26 +112,35 @@ const Projects = () => {
     <section id="projects" className="jumbotron">
       <h2>Projects</h2>
       <TransitionGroup component={null}>
-        {show &&
-          projects &&
-          projects.map(({ node }, i) => {
-            const project = formattedProject(node);
-            return (
-              <CSSTransition
-                key={`project-transition-${i}`}
-                classNames="fade"
-                timeout={300}
-              >
-                <div
-                  key={`project-${i}`}
-                  className="nav-item"
-                  style={{ height: "100%", transitionDelay: `${i * 7}00ms` }}
+        {show && projects && (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-evenly",
+            }}
+          >
+            {projects.map(({ node }, i) => {
+              const project = formattedProject(node);
+              if (!project) return null;
+              return (
+                <CSSTransition
+                  key={`project-transition-${i}`}
+                  classNames="fade"
+                  timeout={300}
                 >
-                  {project}
-                </div>
-              </CSSTransition>
-            );
-          })}
+                  <div
+                    key={`project-${i}`}
+                    className="project"
+                    style={{ transitionDelay: `${i * 7}00ms` }}
+                  >
+                    {project}
+                  </div>
+                </CSSTransition>
+              );
+            })}{" "}
+          </div>
+        )}
       </TransitionGroup>
     </section>
   );
