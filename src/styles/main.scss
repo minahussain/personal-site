@@ -22,6 +22,7 @@ html {
 .main {
     position: absolute;
     width: 100%;
+    height: calc(100% - 30px);
     //overflow: hidden;
     left: 0;
     top: 0;
@@ -130,7 +131,7 @@ a {
 }
 
 a:hover {
-    color: $accent-color;
+    color: $primary-color;
 }
 
 button {

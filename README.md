@@ -3,12 +3,13 @@
 </h1>
 <p>
   Hi, I'm Mina and this is the repo for my personal website. Feel free to use with credit. 
-  I created this using <a href="https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">GatsbyJS</a>, hosted with Gatsby Cloud.
+  I created the <a href="https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">GatsbyJS</a> framework, hosted with Gatsby Cloud.
 </p>
 
 ## ✏️ TODO
 
 - Add transitions
+- Write up projects
 - Add resume link
 - Cleanup sass vars
 
