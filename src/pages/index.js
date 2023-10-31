@@ -5,11 +5,11 @@ import Layout from "./layout";
 
 // markup
 const IndexPage = () => {
-  return (
-    <Layout>
-      <Hero />
-    </Layout>
-  );
+    return (
+        <Layout>
+            <Hero />
+        </Layout>
+    );
 };
 
 export default IndexPage;

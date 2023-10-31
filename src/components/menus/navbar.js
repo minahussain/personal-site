@@ -12,6 +12,7 @@ const StyledLink = styled(Link)`
   font-size: $tiny-font-size;
   border-bottom: 0px;
   cursor: pointer;
+  text-decoration: none;
   ":hover": {
     color: $white-color;
     border-bottom: 1px solid $white-color;

@@ -36,7 +36,7 @@ module.exports = {
     },
     {
       name: "portfolio",
-      url: "portfolio",
+      url: "/portfolio",
     },
   ],
 };

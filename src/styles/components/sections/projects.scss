@@ -2,7 +2,9 @@
     color: $white-color;
     border-top: 0;
     padding: 1rem;
-    //background-clip: content-box;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
 
     a {
         color: $white-highlight-lite;
@@ -13,16 +15,14 @@
     }
 
     .project {
-        position: relative;
-        z-index: 0;
-        height: 600px;
-        width: 600px;
-        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 100%;
     }
 
     .project-img {
-        position: absolute;
-        z-index: 1;
+        display: flex;
         box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048),
         0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -30,13 +30,14 @@
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
         0 70px 80px rgba(0, 0, 0, 0.12);
         width: 450px;
-        height: 210px;
+        height: 250px;
         margin-left: 20px;
+        margin-top: -230px;
     }
 
     .img-card {
-        height: 300px;
-        width: 450px;
+        height: 270px;
+        width: 470px;
     }
 
     .img-layer-one {
@@ -45,10 +46,9 @@
         opacity: 0.8;
         //background-image: linear-gradient(160deg, $primary-color 40%, $accent-color 100%);
         top: 10px;
-        height: 210px;
+        height: 250px;
         width: 450px;
         z-index: 0;
-        position: absolute;
         box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048),
         0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -60,13 +60,8 @@
     .img-layer-two {
         background-color: $primary-color;
         opacity: 0.7;
-        //background-image: linear-gradient(160deg, $primary-color 40%, $accent-color 100%);
-        top: -10px;
-        left: 10px;
-        height: 210px;
+        height: 250px;
         width: 450px;
-        z-index: 0;
-        position: absolute;
     }
 
     .card-wrap {
@@ -79,12 +74,9 @@
     }
 
     .prj-card {
-        position: absolute;
-        z-index: 3;
-        margin-left: 20px;
-        margin-top: 0;
+        margin-top: 50px;
         display: flex;
-        min-width: 600px;
+        max-width: 470px;
         flex-direction: column;
 
         .project-description {
@@ -113,7 +105,6 @@
             background-color: $black-highlight;
             text-align: right;
             padding: 0 0.4rem;
-            z-index: 0;
             color: $white-color;
             display: flex;
             flex-direction: column;
@@ -121,10 +112,9 @@
             justify-content: flex-end;
             align-items: flex-end;
             right: 0;
-            margin-top: -7.5%;
 
             @media screen and (max-width: 800px) {
-                margin-top: -3%;
+                // margin-top: -3%;
             }
         }
 
@@ -151,25 +141,23 @@
         .project-tech {
             display: flex;
             justify-content: flex-start;
-            //padding-left: 0.5rem;
             font-size: $tiny-font-size;
             align-items: center;
 
             ul {
                 list-style-type: none;
                 padding: 2px 0;
-                margin: 0;
                 height: auto;
-                //background-color: $white-highlight;
-                background-image: linear-gradient(200deg, $white-highlight 50%, $black-highlight 150%);
-                border-radius: 5px;
                 display: flex;
                 align-items: center;
             }
-
+            
             li {
+                border-radius: 5px;
+                background-image: linear-gradient(200deg, $white-highlight 50%, $black-highlight 150%);
                 display: inline-flex;
                 padding: 0 1rem;
+                margin: 8px;
                 font-family: 'Space Mono Italic', monospace;
             }
         }
@@ -185,62 +173,49 @@
 @media screen and (max-width: 800px) {
     #projects {
         padding: 1rem;
-        width: 90%;
-        top: 60px;
-        position: absolute;
+        width: unset;
 
         .project {
             width: 100%;
-            height: 600px;
-        }
-
-        .project-img {
-            display: block;
-            width: 250px;
-            max-height: 120px;
-            margin-left: 20px;
+            min-height: 400px;
+            margin-bottom: 100px;
         }
 
         .img-card {
-            height: 150px;
-            left: 0;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
         }
 
-        .img-layer-one {
-            //visibility: hidden;
-            width: 80vw;
-            height: 70px;
-            position: absolute;
-            left: 0;
-            top: 10px;
+        .project-img {
+            display: flex;
+            width: 330px;
+            height: 210px;
+            margin-left: 20px;
+            margin-top: -200px;
         }
 
         .img-layer-two {
-            height: 120px;
-            width: 250px;
-            top: -10px;
-            left: 10px;
+            width: 330px;
+            height: 210px;
         }
 
         .prj-card {
             display: flex;
-            width: 80vw;
-            min-width: 200px;
-            margin-left: 0;
+            width: 100%;
+            max-width: 340px;
+            margin: 0px;
 
             .project-title {
                 text-align: right;
-                position: absolute;
-                margin-top: -10px;
             }
 
             .project-description {
-                display: block;
+                display: flex;
                 width: 100%;
                 min-width: 200px;
                 padding: 0;
-                margin-top: 90px;
             }
 
             .project-tech {
