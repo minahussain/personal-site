@@ -103,7 +103,11 @@ const Portfolio = () => {
                         </div>
                         <div className="project-links">
                             {github && (
-                                <a href={github} aria-label="GitHub Link">
+                                <a
+                                    href={github}
+                                    aria-label="GitHub Link"
+                                    target="_blank"
+                                >
                                     <FaGithub size={30} />
                                 </a>
                             )}{" "}
@@ -112,6 +116,7 @@ const Portfolio = () => {
                                     href={external}
                                     aria-label="External Link"
                                     className="external"
+                                    target="_blank"
                                 >
                                     <FaExternalLinkAlt size={30} />
                                 </a>
